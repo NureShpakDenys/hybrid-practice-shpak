@@ -1,0 +1,103 @@
+{
+ "problem": "C2",
+ "pipeline": "hybrid",
+ "run": 2,
+ "model": "gemini:gemini-3.1-flash-lite",
+ "timestamp": "2026-10-07T21:53:36",
+ "answer": {
+  "status": "optimal",
+  "solution": {
+   "build": [
+    "Single sign-on (SSO)",
+    "Two-factor authentication (2FA)",
+    "Dark mode",
+    "Real-time sync",
+    "Full-text search"
+   ]
+  },
+  "objective": 32
+ },
+ "trace": {
+  "attempts": [
+   {
+    "ir": {
+     "variables": {
+      "SSO": [
+       0,
+       1
+      ],
+      "Audit_log": [
+       0,
+       1
+      ],
+      "Two_factor_authentication": [
+       0,
+       1
+      ],
+      "Dark_mode": [
+       0,
+       1
+      ],
+      "Offline_mode": [
+       0,
+       1
+      ],
+      "Real_time_sync": [
+       0,
+       1
+      ],
+      "CSV_export": [
+       0,
+       1
+      ],
+      "Public_API": [
+       0,
+       1
+      ],
+      "Rate_limiting": [
+       0,
+       1
+      ],
+      "Full_text_search": [
+       0,
+       1
+      ]
+     },
+     "all_different": [],
+     "constraints": [
+      "5*SSO + 3*Audit_log + 4*Two_factor_authentication + 2*Dark_mode + 6*Offline_mode + 5*Real_time_sync + 2*CSV_export + 7*Public_API + 3*Rate_limiting + 4*Full_text_search <= 20",
+      "SSO + Audit_log + Two_factor_authentication + Dark_mode + Offline_mode + Real_time_sync + CSV_export + Public_API + Rate_limiting + Full_text_search <= 5",
+      "Two_factor_authentication <= SSO",
+      "Offline_mode + Real_time_sync <= 1",
+      "Public_API <= Rate_limiting",
+      "SSO + Audit_log + Two_factor_authentication + Rate_limiting >= 2"
+     ],
+     "objective": {
+      "maximize": "8*SSO + 4*Audit_log + 7*Two_factor_authentication + 3*Dark_mode + 9*Offline_mode + 8*Real_time_sync + 2*CSV_export + 11*Public_API + 3*Rate_limiting + 6*Full_text_search"
+     }
+    },
+    "errors": []
+   }
+  ],
+  "solver": {
+   "status": "optimal",
+   "n_solutions": 1,
+   "objective": 32,
+   "first_solution": {
+    "SSO": 1,
+    "Audit_log": 0,
+    "Two_factor_authentication": 1,
+    "Dark_mode": 1,
+    "Offline_mode": 0,
+    "Real_time_sync": 1,
+    "CSV_export": 0,
+    "Public_API": 0,
+    "Rate_limiting": 0,
+    "Full_text_search": 1
+   }
+  }
+ },
+ "error": null,
+ "seconds": 9.2,
+ "llm_calls": 2
+}

@@ -1,0 +1,58 @@
+{
+ "problem": "C1",
+ "pipeline": "hybrid",
+ "run": 1,
+ "model": "gemini:gemini-3.1-flash-lite",
+ "timestamp": "2026-10-07T21:52:57",
+ "answer": {
+  "status": "unique",
+  "solution": {
+   "Olha": "knight",
+   "Pylyp": "knight",
+   "Rostyslav": "knave"
+  },
+  "objective": null
+ },
+ "trace": {
+  "attempts": [
+   {
+    "ir": {
+     "variables": {
+      "Olha": [
+       0,
+       1
+      ],
+      "Pylyp": [
+       0,
+       1
+      ],
+      "Rostyslav": [
+       0,
+       1
+      ]
+     },
+     "all_different": [],
+     "constraints": [
+      "Olha == ((Olha == 0) or (Pylyp == 0) or (Rostyslav == 0))",
+      "Pylyp == (Olha == 1)",
+      "Rostyslav == (Pylyp == 0)"
+     ]
+    },
+    "errors": []
+   }
+  ],
+  "solver": {
+   "status": "unique",
+   "n_solutions": 1,
+   "objective": null,
+   "first_solution": {
+    "Olha": 1,
+    "Pylyp": 1,
+    "Rostyslav": 0
+   }
+  }
+ },
+ "error": null,
+ "seconds": 10.9,
+ "llm_calls": 2
+}

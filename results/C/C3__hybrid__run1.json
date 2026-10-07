@@ -1,0 +1,88 @@
+{
+ "problem": "C3",
+ "pipeline": "hybrid",
+ "run": 1,
+ "model": "gemini:gemini-3.1-flash-lite",
+ "timestamp": "2026-10-07T21:53:59",
+ "answer": {
+  "status": "unique",
+  "solution": {
+   "Iryna": 1,
+   "Kostiantyn": 4,
+   "Liudmyla": 3,
+   "Mykhailo": 5,
+   "Nataliia": 2,
+   "Orest": 6
+  },
+  "objective": null
+ },
+ "trace": {
+  "attempts": [
+   {
+    "ir": {
+     "variables": {
+      "Iryna": [
+       1,
+       1
+      ],
+      "Orest": [
+       1,
+       6
+      ],
+      "Kostiantyn": [
+       1,
+       6
+      ],
+      "Liudmyla": [
+       1,
+       6
+      ],
+      "Mykhailo": [
+       1,
+       6
+      ],
+      "Nataliia": [
+       1,
+       6
+      ]
+     },
+     "all_different": [
+      [
+       "Iryna",
+       "Orest",
+       "Kostiantyn",
+       "Liudmyla",
+       "Mykhailo",
+       "Nataliia"
+      ]
+     ],
+     "constraints": [
+      "(abs(Orest - Iryna) == 1) or (abs(Orest - Iryna) == 5)",
+      "abs(Kostiantyn - Iryna) == 3",
+      "(abs(Liudmyla - Kostiantyn) == 1) or (abs(Liudmyla - Kostiantyn) == 5)",
+      "(abs(Mykhailo - Orest) == 1) or (abs(Mykhailo - Orest) == 5)",
+      "(Liudmyla == Nataliia + 1) or (Nataliia == 6 and Liudmyla == 1)",
+      "Orest != 2"
+     ]
+    },
+    "errors": []
+   }
+  ],
+  "solver": {
+   "status": "unique",
+   "n_solutions": 1,
+   "objective": null,
+   "first_solution": {
+    "Iryna": 1,
+    "Orest": 6,
+    "Kostiantyn": 4,
+    "Liudmyla": 3,
+    "Mykhailo": 5,
+    "Nataliia": 2
+   }
+  }
+ },
+ "error": null,
+ "seconds": 10.8,
+ "llm_calls": 2
+}

@@ -1,0 +1,24 @@
+{
+ "problem": "C4",
+ "pipeline": "monolith",
+ "run": 1,
+ "model": "gemini:gemini-3.1-flash-lite",
+ "timestamp": "2026-10-07T21:54:18",
+ "answer": {
+  "status": "unique",
+  "solution": {
+   "Andrii": "Tuesday",
+   "Bohdana": "Monday",
+   "Vasyl": "Friday",
+   "Hanna": "Wednesday",
+   "Denys": "Thursday"
+  },
+  "objective": null
+ },
+ "trace": {
+  "reasoning": "1. The working week is Monday, Tuesday, Wednesday, Thursday, Friday. 2. Vasyl's day off is the day just before the weekend, so Vasyl = Friday. 3. Hanna takes her day off in the middle of the working week, so Hanna = Wednesday. 4. Remaining days are Monday, Tuesday, Thursday. 5. Andrii's day off is immediately after Bohdana's. The only consecutive pair available is Monday and Tuesday. Thus, Bohdana = Monday and Andrii = Tuesday. 6. The only remaining day is Thursday, which must be Denys's day off. 7. Check condition 4: Denys does not take the first working day (Monday) off. Denys is Thursday, so this is satisfied. All conditions are met."
+ },
+ "error": null,
+ "seconds": 2.7,
+ "llm_calls": 1
+}

@@ -1,0 +1,25 @@
+{
+ "problem": "C2",
+ "pipeline": "monolith",
+ "run": 1,
+ "model": "gemini:gemini-3.1-flash-lite",
+ "timestamp": "2026-10-07T21:53:24",
+ "answer": {
+  "status": "optimal",
+  "solution": {
+   "build": [
+    "Public API",
+    "Rate limiting",
+    "Single sign-on (SSO)",
+    "Two-factor authentication (2FA)"
+   ]
+  },
+  "objective": 29
+ },
+ "trace": {
+  "reasoning": "We need to maximize business value with a budget of 20 days and max 5 features. Constraints: 1) 2FA requires SSO. 2) Offline mode and Real-time sync are mutually exclusive. 3) Public API requires Rate limiting. 4) At least two security features (SSO, Audit log, 2FA, Rate limiting). Candidate features: SSO(5,8), Audit(3,4), 2FA(4,7), Dark(2,3), Offline(6,9), Sync(5,8), CSV(2,2), API(7,11), Rate(3,3), Search(4,6). Let's test combinations. If we pick Public API(7,11) and Rate limiting(3,3), we have 10 days/14 value. Remaining budget 10, 3 features left. To maximize value, we add SSO(5,8) and 2FA(4,7). Total cost: 7+3+5+4 = 19. Total value: 11+3+8+7 = 29. Features: 4. Security features: Rate, SSO, 2FA (3 total, satisfies rule 4). This is valid. Can we do better? If we swap 2FA for something else, value drops. If we add Audit log instead of 2FA, cost is 7+3+5+3 = 18, value 11+3+8+4 = 26. If we include Offline mode(6,9) instead of API, we lose value. The combination {Public API, Rate limiting, SSO, 2FA} yields 29."
+ },
+ "error": null,
+ "seconds": 3.3,
+ "llm_calls": 1
+}

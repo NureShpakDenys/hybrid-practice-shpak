@@ -1,0 +1,79 @@
+{
+ "problem": "C4",
+ "pipeline": "hybrid",
+ "run": 2,
+ "model": "gemini:gemini-3.1-flash-lite",
+ "timestamp": "2026-10-07T21:54:36",
+ "answer": {
+  "status": "unique",
+  "solution": {
+   "Andrii": "Tuesday",
+   "Bohdana": "Monday",
+   "Vasyl": "Friday",
+   "Hanna": "Wednesday",
+   "Denys": "Thursday"
+  },
+  "objective": null
+ },
+ "trace": {
+  "attempts": [
+   {
+    "ir": {
+     "variables": {
+      "Andrii": [
+       1,
+       5
+      ],
+      "Bohdana": [
+       1,
+       5
+      ],
+      "Vasyl": [
+       1,
+       5
+      ],
+      "Hanna": [
+       1,
+       5
+      ],
+      "Denys": [
+       1,
+       5
+      ]
+     },
+     "all_different": [
+      [
+       "Andrii",
+       "Bohdana",
+       "Vasyl",
+       "Hanna",
+       "Denys"
+      ]
+     ],
+     "constraints": [
+      "Vasyl == 5",
+      "Hanna == 3",
+      "Andrii == Bohdana + 1",
+      "Denys != 1"
+     ]
+    },
+    "errors": []
+   }
+  ],
+  "solver": {
+   "status": "unique",
+   "n_solutions": 1,
+   "objective": null,
+   "first_solution": {
+    "Andrii": 2,
+    "Bohdana": 1,
+    "Vasyl": 5,
+    "Hanna": 3,
+    "Denys": 4
+   }
+  }
+ },
+ "error": null,
+ "seconds": 15.0,
+ "llm_calls": 2
+}

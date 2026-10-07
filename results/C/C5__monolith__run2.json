@@ -1,0 +1,22 @@
+{
+ "problem": "C5",
+ "pipeline": "monolith",
+ "run": 2,
+ "model": "gemini:gemini-3.1-flash-lite",
+ "timestamp": "2026-10-07T21:54:54",
+ "answer": {
+  "status": "unique",
+  "solution": {
+   "Liubov": "10:00",
+   "Mykola": "9:00",
+   "Nazar": "11:00"
+  },
+  "objective": null
+ },
+ "trace": {
+  "reasoning": "There are three parcels (Liubov, Mykola, Nazar) at 9:00, 10:00, and 11:00. Condition 3: Liubov is not at 11:00. Condition 1: Mykola < Liubov. If Liubov is at 10:00, Mykola must be at 9:00. This leaves Nazar at 11:00. Check Condition 2: Nazar is not at 9:00 (True, he is at 11:00). If Liubov is at 9:00, Mykola cannot be earlier (impossible). If Liubov is at 11:00 (violates condition 3). Thus, the only valid assignment is Mykola: 9:00, Liubov: 10:00, Nazar: 11:00."
+ },
+ "error": null,
+ "seconds": 2.7,
+ "llm_calls": 1
+}

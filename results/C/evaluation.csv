@@ -1,0 +1,21 @@
+problem,title,pipeline,run,correct,status,expected_status,match_pct,llm_calls,seconds,reason
+C1,Knights and knaves (3),hybrid,1,True,unique,unique,100,2,10.9,
+C1,Knights and knaves (3),hybrid,2,True,unique,unique,100,2,15.6,
+C1,Knights and knaves (3),monolith,1,True,unique,unique,100,1,7.0,
+C1,Knights and knaves (3),monolith,2,True,unique,unique,100,1,2.9,
+C2,Release planning (optimization),hybrid,1,True,optimal,optimal,,2,4.9,
+C2,Release planning (optimization),hybrid,2,True,optimal,optimal,,2,9.2,
+C2,Release planning (optimization),monolith,1,False,optimal,optimal,,1,3.3,"objective 29, expected 32; the chosen set of features is not the optimal one"
+C2,Release planning (optimization),monolith,2,False,optimal,optimal,,1,4.0,"objective 29, expected 32; the chosen set of features is not the optimal one"
+C3,Round table,hybrid,1,True,unique,unique,100,2,10.8,
+C3,Round table,hybrid,2,True,unique,unique,100,2,7.7,
+C3,Round table,monolith,1,True,unique,unique,100,1,11.0,
+C3,Round table,monolith,2,True,unique,unique,100,1,3.1,
+C4,Days off,hybrid,1,True,unique,unique,100,2,12.3,
+C4,Days off,hybrid,2,True,unique,unique,100,2,15.0,
+C4,Days off,monolith,1,True,unique,unique,100,1,2.7,
+C4,Days off,monolith,2,True,unique,unique,100,1,3.4,
+C5,Parcel delivery,hybrid,1,True,unique,unique,100,2,9.7,
+C5,Parcel delivery,hybrid,2,True,unique,unique,100,2,10.1,
+C5,Parcel delivery,monolith,1,True,unique,unique,100,1,2.5,
+C5,Parcel delivery,monolith,2,True,unique,unique,100,1,2.7,

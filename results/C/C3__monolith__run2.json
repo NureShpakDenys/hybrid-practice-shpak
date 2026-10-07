@@ -1,0 +1,25 @@
+{
+ "problem": "C3",
+ "pipeline": "monolith",
+ "run": 2,
+ "model": "gemini:gemini-3.1-flash-lite",
+ "timestamp": "2026-10-07T21:53:56",
+ "answer": {
+  "status": "unique",
+  "solution": {
+   "Iryna": 1,
+   "Kostiantyn": 4,
+   "Liudmyla": 3,
+   "Mykhailo": 5,
+   "Nataliia": 2,
+   "Orest": 6
+  },
+  "objective": null
+ },
+ "trace": {
+  "reasoning": "1. Iryna is in chair 1. 2. Kostiantyn is opposite Iryna, so Kostiantyn is in chair 4. 3. Orest is next to Iryna (chair 2 or 6). Condition 6 says Orest is not in chair 2, so Orest is in chair 6. 4. Mykhailo is next to Orest. Since chair 1 is Iryna, Mykhailo must be in chair 5. 5. Liudmyla is next to Kostiantyn (chair 3 or 5). Since Mykhailo is in 5, Liudmyla must be in chair 3. 6. Nataliia is immediately counter-clockwise from Liudmyla. Counter-clockwise from 3 is 2. So Nataliia is in chair 2. Checking all conditions: Iryna(1), Orest(6), Kostiantyn(4), Liudmyla(3), Mykhailo(5), Nataliia(2). Orest(6) is next to Iryna(1). Kostiantyn(4) is opposite Iryna(1). Liudmyla(3) is next to Kostiantyn(4). Mykhailo(5) is next to Orest(6). Nataliia(2) is counter-clockwise from Liudmyla(3). Orest(6) is not in chair 2. All conditions satisfied."
+ },
+ "error": null,
+ "seconds": 3.1,
+ "llm_calls": 1
+}

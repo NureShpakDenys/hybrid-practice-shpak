@@ -1,0 +1,73 @@
+{
+ "problem": "C5",
+ "pipeline": "hybrid",
+ "run": 2,
+ "model": "gemini:gemini-3.1-flash-lite",
+ "timestamp": "2026-10-07T21:55:06",
+ "answer": {
+  "status": "unique",
+  "solution": {
+   "Liubov": "10:00",
+   "Mykola": "9:00",
+   "Nazar": "11:00"
+  },
+  "objective": null
+ },
+ "trace": {
+  "attempts": [
+   {
+    "ir": {
+     "variables": {
+      "Liubov": {
+       "values": [
+        9,
+        10,
+        11
+       ]
+      },
+      "Mykola": {
+       "values": [
+        9,
+        10,
+        11
+       ]
+      },
+      "Nazar": {
+       "values": [
+        9,
+        10,
+        11
+       ]
+      }
+     },
+     "all_different": [
+      [
+       "Liubov",
+       "Mykola",
+       "Nazar"
+      ]
+     ],
+     "constraints": [
+      "Mykola < Liubov",
+      "Nazar != 9",
+      "Liubov != 11"
+     ]
+    },
+    "errors": []
+   }
+  ],
+  "solver": {
+   "status": "unique",
+   "n_solutions": 1,
+   "objective": null,
+   "first_solution": {
+    "Liubov": 10,
+    "Mykola": 9,
+    "Nazar": 11
+   }
+  }
+ },
+ "error": null,
+ "seconds": 10.1,
+ "llm_calls": 2
+}
